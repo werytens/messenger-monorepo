@@ -1,0 +1,60 @@
+.player {
+    background: linear-gradient(40deg, #bfb5ff, #9875ff);
+    padding: 10px;
+    border-radius: 6px;
+
+    min-width: 300px;
+
+    margin-top: 10px;
+}
+
+.controls {
+    display: flex;
+}
+
+.controls button {
+    border: 0; 
+    padding: 0;
+    margin: 0 10px;
+
+    background: inherit;
+}
+
+.play_button, .stop_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.play_button:hover, .stop_button:hover {
+    color: black;
+} 
+
+.progress {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+  
+.progressBar {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #fff;
+    position: relative;
+}
+  
+.progressIndicator {
+    height: 100%;
+    background-color: #9875ff;
+}
+  
+.currentTime, .duration {
+    margin: 5px 5px;
+}
+
+.slash, .currentTime, .duration {
+    color: white;
+}

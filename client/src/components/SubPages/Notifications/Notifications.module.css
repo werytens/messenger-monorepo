@@ -1,0 +1,23 @@
+.root {
+    width: 100%;
+    height: 100%;
+
+    padding: 60px 80px;
+}
+
+.content {
+    border-radius: 6px;
+    background: white;
+    padding: 12px 24px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.text {
+    margin-left: 15px;
+}

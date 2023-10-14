@@ -1,0 +1,59 @@
+.login {
+    position: absolute;
+    top: 0; left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url('https://i.pinimg.com/originals/ed/a5/73/eda5739966cb33768d8ad0d77d7307ce.gif') no-repeat;
+    background-size: 100% 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #FFFFFF;
+
+    width: 360px;
+    height: 380px;
+
+    padding: 2vh;
+
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.accept_block {
+    text-align: center;
+}
+
+.registration_description {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.reg_link {
+    text-decoration: none;
+    color: rgb(205, 166, 255);
+    margin-left: 4px;
+}
+
+.reg_link:hover {
+    color: rgb(182, 75, 248);
+    text-decoration: underline;
+}

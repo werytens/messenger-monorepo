@@ -1,0 +1,39 @@
+.root {
+    width: 100%;
+    height: 100%;
+
+    padding: 60px 80px;
+}
+
+.content {
+    border-radius: 6px;
+    background: white;
+    padding: 12px 24px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+}
+
+.table_title {
+    margin-bottom: 20px;
+    color: #707C97;
+}
+
+
+td, th {
+    padding: 20px;
+    background: whitesmoke;
+    color: #707C97;
+}
+
+.now_day {
+    color: white;
+    background: linear-gradient(90deg, #bfb5ff, #9875ff);
+}

@@ -1,0 +1,41 @@
+.root {
+    width: 100%;
+    height: 100%;
+
+    padding: 60px 80px;
+}
+
+.content {
+    border-radius: 6px;
+    background: white;
+    padding: 12px 24px;
+}
+
+
+.main_description {
+    margin-bottom: 30px;
+}
+
+.frontend, .backend {
+    margin-bottom: 15px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #707C97;
+}
+
+.source_code {
+    margin-top: 40px;
+    text-align: center;
+}

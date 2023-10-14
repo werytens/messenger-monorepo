@@ -1,0 +1,52 @@
+.input {
+    width: 100%;
+    outline: none;
+
+    height: 40px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #707C97;
+
+    /* border: rgba(112, 124, 151, 0.5) solid 2px; */
+
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+
+    border-bottom: rgba(112, 124, 151, 0.5) solid 2px;
+
+    text-align: center;
+
+    position: relative;
+
+    margin: 0;
+}
+
+input::placeholder {
+    color: #707C97;
+    opacity: 0.5;
+}
+
+.content {
+    display: flex;
+}
+
+.button {
+    border: rgba(112, 124, 151, 0.5) solid 2px;
+
+    color: rgba(112, 124, 151, 0.5);
+
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+
+    margin: 0;
+}
+
+.button:hover {
+    color: rgb(57, 60, 67);
+}

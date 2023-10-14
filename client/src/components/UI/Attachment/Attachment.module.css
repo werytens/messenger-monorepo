@@ -1,0 +1,26 @@
+
+.other_attachment {
+    color: #707C97;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    font-size: 12px;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.attachment_icon svg {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.other_attachment:hover {
+    color: blue;
+}

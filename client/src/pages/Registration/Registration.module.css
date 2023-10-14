@@ -1,0 +1,57 @@
+.registration {
+    position: absolute;
+    top: 0; left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url('https://i.pinimg.com/originals/ed/a5/73/eda5739966cb33768d8ad0d77d7307ce.gif') no-repeat;
+    background-size: 100% 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #FFFFFF;
+
+    width: 500px;
+    height: 720px;
+
+    padding: 2vh;
+
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.inputs_block {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    height: 100%;
+}
+
+.fcs_inputs {
+    display: flex;
+}
+
+.accept_block {
+    text-align: center;
+}
+

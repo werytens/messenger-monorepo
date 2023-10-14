@@ -1,0 +1,49 @@
+.button {
+    background: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin: 20px 0;
+}
+
+.button:hover {
+    transition: .2s;
+    background: #cbb9ff;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+
+    border-radius: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.left_header_side, .status_block {
+    display: flex;
+    align-items: center;
+}
+
+.name_block, .status_block {
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+
+.status_block {
+    color: #9875ff;
+    text-decoration: underline;
+}
+
+.last_message {
+    color: #707C97;
+}

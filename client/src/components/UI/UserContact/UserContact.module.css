@@ -1,0 +1,37 @@
+.user {
+    padding: 0 3px;
+
+    display: flex;
+    height: 56px;
+
+    cursor: pointer;
+}
+
+.text_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 12px;
+    padding: 8px 0;
+
+    height: 56px;
+}
+
+.avatar_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username {
+    font-size: 12px;
+    color: grey !important;
+}
+
+.user:hover {
+    background: rgb(194, 194, 194);
+}
+.contacts {
+    margin-bottom: 10px;
+}

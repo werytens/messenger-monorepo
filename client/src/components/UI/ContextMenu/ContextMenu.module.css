@@ -1,0 +1,33 @@
+.active {
+    display: flex !important;
+}
+
+.delete_message_button, .edit_message_button {
+    background: rgba(0,0,0,0);
+    border: 0;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 0;
+}
+
+.delete_message_button:hover, .edit_message_button:hover {
+    transition: .2s;
+    color: black;
+}
+
+
+.context_menu {
+    position: absolute;
+    top: 42px;
+    background: linear-gradient(90deg, #bfb5ff, #9875ff);
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+}
