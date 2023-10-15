@@ -3,15 +3,15 @@ const router = new Router();
 const MessagesController = require('../controllers/MessagesController');
 
 router.post('/send', MessagesController.send);
-router.post('/delete', MessagesController.delete);
-router.post('/edit', MessagesController.edit);
-router.post('/makeChecked', MessagesController.makeChecked);
+router.delete('/delete', MessagesController.delete);
+router.put('/edit', MessagesController.edit);
+router.put('/makeChecked', MessagesController.makeChecked);
 router.get('/get/:id', MessagesController.get);
 router.get('/getLast/:id', MessagesController.getLast);
 router.get('/getUnchecked/:chatId', MessagesController.getUnchecked);
 
 router.post('/addAttachment', MessagesController.addAttachment);
-router.post('/deleteAttachment', MessagesController.deleteAttachment);
+router.delete('/deleteAttachment', MessagesController.deleteAttachment);
 router.get('/getAttachment/:id', MessagesController.getAttachment);
 
 router.get('/nextid', MessagesController.nextId)

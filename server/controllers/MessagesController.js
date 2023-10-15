@@ -16,7 +16,7 @@ class MessagesController {
 
     async makeChecked(req, res, next) {
         try {
-            const {ids} = req.body;
+            const {ids} = req.body.data;
             const response = await messageService.makeChecked(ids);
             return res.json(response);
         } catch (e) {
@@ -36,7 +36,7 @@ class MessagesController {
 
     async edit(req, res, next) {
         try {
-            const {id, content} = req.body;
+            const {id, content} = req.body.data;
             const response = await messageService.edit(id, content);
             return res.json(response);
         } catch (e) {

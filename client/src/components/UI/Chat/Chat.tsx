@@ -113,6 +113,7 @@ const Chat: React.FC<Props> = ({visible, chatInfo}) => {
 
     const saveOneMessage = async (message: IMessage) => {
         await MessageService.send(message);
+        getAllMessages();
     }
 
     const sendMessage = async () => {
@@ -211,27 +212,36 @@ const Chat: React.FC<Props> = ({visible, chatInfo}) => {
 
                 socket.current.onmessage = (event) => {
                     const receivedMessage = JSON.parse(event.data);
+
+                    console.log(receivedMessage)
                     
                     if (receivedMessage.type === 'update' && receivedMessage.attributes === chatInfo[0]) {
-                        getAllMessages();
+                        setTimeout(() => {
+                            getAllMessages();
+                        }, 10)
                     } 
                     
                     if (receivedMessage.type === 'check' && receivedMessage.attributes[0] === chatInfo[0] && receivedMessage.attributes[1] !== store.user.id) {
-                        getAllMessages();
-                        setIsTargetOnline(true);
+                        setTimeout(() => {
+                            getAllMessages();
+                            setIsTargetOnline(true);
+                        }, 10)
+
                     } 
 
-                    if (receivedMessage.type === 'uncheck' && receivedMessage.attributes === chatInfo[0] && receivedMessage.attributes[1] !== store.user.id) {
-                        setIsTargetOnline(false);
+                    if (receivedMessage.type === 'uncheck' && receivedMessage.attributes === chatInfo[0] && receivedMessage.attributes[1] !== store.user.id) {                        
+                        setTimeout(() => {                        
+                            setIsTargetOnline(false);
+                        }, 10)
                     } 
 
                     if (receivedMessage.author_id) {
-                        getOneMessage(receivedMessage);
                         setTimeout(() => {
+                            getOneMessage(receivedMessage);
                             if (divRef.current) {
                                 divRef.current.scrollTop = divRef.current.scrollHeight
                             }    
-                        }, 100)
+                        }, 10)
                     }
                     
                 }

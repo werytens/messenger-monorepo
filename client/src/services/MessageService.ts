@@ -15,9 +15,10 @@ export default class MessageService {
 
     static async makeChecked(ids: number[]) {
         try {
-            await axios.post(API_URL + 'messages/makeChecked', {
-                ids
-            })
+            // await axios.post(API_URL + 'messages/makeChecked', {
+                // ids
+            // })
+            await axios.put(API_URL + 'messages/makeChecked', {data: {ids}})
         } catch (e) {
             console.error('Error in makeChecked: ', e);
             throw e;
@@ -87,7 +88,7 @@ export default class MessageService {
 
     static async deleteMessage(id: number | null) {
         try {
-            await axios.post(API_URL + 'messages/delete', { id })
+            await axios.delete(API_URL + 'messages/delete', { data: { id }})
         } catch (e) {
             console.error("er in deletemsg: ", e);
             throw e;
@@ -96,7 +97,7 @@ export default class MessageService {
 
     static async editMessage(id: number | null, content: string) {
         try {
-            await axios.post(API_URL + 'messages/edit', { id, content })
+            await axios.put(API_URL + 'messages/edit', { data: { id, content }})
         } catch (e) {
             console.error("er in editmsg: ", e);
             throw e;
@@ -105,7 +106,7 @@ export default class MessageService {
 
     static async deleteAttachment(messageId: number | null, attachmentId: number | null) {
         try {
-            await axios.post(API_URL + 'messages/deleteAttachment', { messageId, attachmentId });
+            await axios.delete(API_URL + 'messages/deleteAttachment', {data: { messageId, attachmentId }});
         } catch (e) {
             console.error("er in delete: ", e);
             throw e;
