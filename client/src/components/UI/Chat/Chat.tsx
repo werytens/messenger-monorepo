@@ -285,9 +285,6 @@ const Chat: React.FC<Props> = ({visible, chatInfo}) => {
                         </div>
                     </div>
                 </div>
-                <div className={cl.right_navbar_side}>
-                    <ChatMenuButton callback={shutter} ><SettingsIcon/></ChatMenuButton>
-                </div>
             </div>
 
             <div className={cl.chat_bar} ref={divRef}>
@@ -324,7 +321,6 @@ const Chat: React.FC<Props> = ({visible, chatInfo}) => {
                 </div>
                 <div className={cl.buttons_block}>
                     <div className = {cl.chat_buttons}>
-                        <ChatMenuButton callback={shutter}><EmojiEmotionsIcon/></ChatMenuButton>
                         <ChatMenuButton callback={handleButtonClick}><AttachFileIcon/></ChatMenuButton>
                         <ChatMenuButton callback={sendMessage} reference={sendRef}><SendIcon/></ChatMenuButton>
                     </div>

@@ -13,10 +13,10 @@ router.post(
 router.post('/login', UserController.login);
 router.post('/logout', UserController.logout);
 router.post('/addContact', UserController.addContact);
-router.post('/setOnlineStatus', UserController.setOnlineStatus);
-router.post('/changeAvatar', UserController.changeAvatar);
-router.post('/changeNS', UserController.changeNameAndSurname);
-router.post('/changeEmail', UserController.changeEmail);
+router.put('/setOnlineStatus', UserController.setOnlineStatus); //...
+router.put('/changeAvatar', UserController.changeAvatar);  //...
+router.put('/changeNS', UserController.changeNameAndSurname);  //...
+router.put('/changeEmail', UserController.changeEmail); //...
 router.get('/getContacts/:id', UserController.getUserContacts);
 router.get('/activate/:link', UserController.activate);
 router.get('/refresh', UserController.refresh);

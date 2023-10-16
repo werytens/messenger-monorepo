@@ -20,10 +20,10 @@ export default class UserService {
 
     static async setOnline(id: number, online: boolean) {
         try {
-            await axios.post(API_URL + 'users/setOnlineStatus', {
+            await axios.put(API_URL + 'users/setOnlineStatus', {data: {
                 user_id: id,
                 online: online
-            })
+            }})
         } catch (e) {
             console.error('Error in setOnline: ', e);
             throw e;
@@ -62,10 +62,15 @@ export default class UserService {
 
     static async ChangeAvatar(id: number, url: string) {
         try {
-            await axios.post(API_URL + 'users/changeAvatar', {
+            // await axios.post(API_URL + 'users/changeAvatar', {
+            //     id: id,
+            //     avatarLink: url
+            // })
+
+            await axios.put(API_URL + 'users/changeAvatar', {data: {
                 id: id,
                 avatarLink: url
-            })
+            }})
         } catch (e) {
             console.error('error in ChangeAvatar', e)
             throw e;
@@ -74,10 +79,15 @@ export default class UserService {
 
     static async ChangeNameAndSurname(id: number, name: string, surname: string) {
         try {
-            await axios.post(API_URL + 'users/changeNS', {
+            // await axios.post(API_URL + 'users/changeNS', {
+            //     id: id,
+            //     name, surname
+            // })
+
+            await axios.put(API_URL + 'users/changeNS', {data: {
                 id: id,
                 name, surname
-            })
+            }})
         } catch (e) {
             console.error('error in ChangeNameAndSurname', e)
             throw e;
@@ -86,12 +96,16 @@ export default class UserService {
 
     static async ChangeEmail(id: number, email: string) {
         try {
-            await axios.post(API_URL + 'users/changeEmail', {
+            // await axios.post(API_URL + 'users/changeEmail', {
+            //     id: id,
+            //     email
+            // })
+
+            await axios.put(API_URL + 'users/changeEmail', {data: {
                 id: id,
                 email
-            })
+            }})
 
-            window.location.reload()
         } catch (e) {
             console.error('error in ChangeEmail', e)
             throw e;

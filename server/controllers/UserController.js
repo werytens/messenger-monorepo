@@ -96,7 +96,7 @@ class UserController {
 
     async setOnlineStatus(req, res, next) {
         try {
-            const {user_id, online} = req.body;
+            const {user_id, online} = req.body.data;
             const result = await userService.setOnlineStatus(user_id, online);
             return res.json(result); 
         } catch (e) {
@@ -116,7 +116,7 @@ class UserController {
 
     async changeAvatar(req, res, next) { 
         try {
-            const {id, avatarLink} = req.body;
+            const {id, avatarLink} = req.body.data;
             const result = await userService.changeAvatar(id, avatarLink);
             return res.json(result);
         } catch (e) {
@@ -126,7 +126,7 @@ class UserController {
 
     async changeNameAndSurname(req, res, next) {
         try {
-            const {id, name, surname} = req.body;
+            const {id, name, surname} = req.body.data;
             const result = await userService.changeNameAndSurname(id, name, surname);
             return res.json(result);
         } catch (e) {
@@ -136,8 +136,9 @@ class UserController {
 
     async changeEmail(req, res, next) {
         try {
-            const {id, email} = req.body;
+            const {id, email} = req.body.data;
             const result = await userService.changeEmail(id, email);
+            return res.json(result);
         } catch (e) {
             next(e);
         }
