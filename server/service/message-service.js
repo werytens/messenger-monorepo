@@ -96,7 +96,6 @@ class MessageService {
     }
 
     async deleteAttachment(messageId, attachmentId) {
-        console.log('bobik2: ', messageId, attachmentId)
 
         const response = await models.messeges.update(
             { attachment_id: null },
@@ -111,7 +110,6 @@ class MessageService {
     async nextId() {
         const response = (await models.messeges.findAll()).length;
 
-        console.log('messages count:', response)
 
         return response
     }
