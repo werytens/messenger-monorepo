@@ -10,8 +10,6 @@ class MessageService {
         }
 
         const message = await models.messeges.create({
-            // Надо поменять, так сделано для теста
-            // id: (await models.messeges.findAll()).length + 30,
             chat_id, content, author_id,
             checked, deleted: false,
             attachment_id
